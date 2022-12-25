@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+
+}
+
+:root {
+    --bg-blue-black: hsl(219, 29%, 14%);
+    --violet: hsl(263, 55%, 52%);
+    --dark-grayish-blue: hsl(217, 19%, 35%);
+    --White: hsl(0, 0%, 100%);
+    --dark-green: rgb(0, 77, 61);
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background: linear-gradient(180deg, #303A4B 0%, #1d1f31 100%);
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    line-height: 1.3;
+    min-height: 100vh;
+}
+
+img,
+figcaption {
+    animation: animation_move 1s;
+}
+
+@keyframes animation_move {
+    0% {
+        transform: translateX(-30px);
+    }
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1110px;
+    grid-gap: 30px;
+    row-gap: 23px;
+    margin: 33px;
+}
+
+
+.gray {
+    border: 3px solid rgb(158, 154, 154);
+}
+
+.yellow {
+    border: 3px solid yellow;
+}
+
+.blue {
+    border: 3px solid skyblue;
+}
+
+.purple {
+    border: 3px solid #9357F5;
+}
+
+.white {
+    color: var(--White);
+}
+
+/* 
+.black-opacity {
+    opacity: 0.7;
+} */
+
+.innerHTML p {
+    font-weight: 900;
+    opacity: 0.7;
+}
+
+.innerHTML>h2 {
+    font-size: 20px/24px;
+    font-weight: 600;
+}
+
+figure,
+figcaption {
+    display: flex;
+    margin: 0%;
+}
+
+figcaption {
+    flex-direction: column;
+    margin: 5px 10px;
+}
+
+figcaption>h2 {
+    font-size: 13px;
+}
+
+figcaption>h2,
+figcaption>h5 {
+    margin: 0;
+}
+
+img {
+    border-radius: 50%;
+    max-width: 36px;
+}
+
+.cas {
+    padding: 32px;
+    border-radius: 8px;
+}
+
+.para_inside {
+    color: var(--White);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.f_f_1 {
+
+    background: linear-gradient(180deg, #32ebc9 0%, rgba(52, 215, 185, 0.9) 100%);
+    grid-column: span 2;
+    color: var(--dark-green);
+    animation: slideIN 1s ease-in;
+    z-index: 1;
+    animation: animation_move 1s;
+}
+
+
+.f_1_2 {
+    background: linear-gradient(180deg, #9357F5 0%, rgba(131, 55, 255, 0.81) 100%);
+    animation: slideup 1s ease-in;
+    animation: animation_move 1s;
+}
+
+
+.s_1_1 {
+    background: linear-gradient(360deg, #f1f1f7 0, #fff 100%);
+    grid-row: span 2;
+    animation: slideup 1s ease-in;
+    animation: animation_move 1s;
+}
+
+
+.s_1_2 {
+    background: linear-gradient(360deg, #f1f1f7 0, #fff 100%);
+    animation: slideIN 1s ease-in;
+    animation: animation_move 1s;
+}
+
+
+.second_col {
+    background: linear-gradient(180deg, #41516e, #3c4e6e 100%);
+    grid-column: span 2;
+    animation: slideright 1s ease-in;
+    animation: animation_move 1s;
+}
+
+.l_1 {
+    background-image: url('https://testimonials-grid-section-nine-ivory.vercel.app/images/button-bg-dark.svg');
+    color: var(--White);
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    grid-column: span 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (hover:hover) {
+    .f_f_1:hover {
+        transition: 0.3s;
+        transform: translateX(-10px);
+
+    }
+
+    .f_1_2:hover {
+        transform: translateY(-10px);
+        transition: 0.3s;
+    }
+
+    .s_1_1:hover {
+        transform: translateX(10px);
+        transition: 0.3s;
+    }
+
+    .s_1_2:hover {
+        transform: translateX(-10px);
+        transition: 0.3s;
+    }
+
+    .second_col:hover {
+        transform: translateY(10px);
+        transition: 0.3s;
+    }
+
+    .container:hover>.cas:not(:hover) {
+        filter: blur(1.5px);
+        opacity: .8;
+    }
+
+    main:hover>.cas:not(footer) {
+        filter: blur(1.5px);
+        opacity: .8;
+    }
+
+    .l_1:hover {
+        transform: scale(1.01);
+        transition: 0.3s;
+    }
+}
+@media (max-width:575px) {
+    .container
+    {
+        display: flex;
+        flex-direction: column;
+    }
+    .l_1
+    {
+        flex-direction: column;
+        padding: 25px;
+        text-align: center;
+    }
+}
+@media (min-width:590px) and (max-width:790px) {
+    .container
+    {
+         
+    }
+    .f_f_1 {
+        grid-column: span 2;
+    }
+    
+    
+    .f_1_2 {
+        grid-column: span 2;
+    }
+    
+    
+    .s_1_1 {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    
+    
+    .s_1_2 {
+   grid-column: span 2;
+    }
+    
+    
+    .second_col {
+        grid-column: span 2;
+        
+    }
+}
